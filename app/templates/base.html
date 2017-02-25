@@ -1,0 +1,34 @@
+{% extends "bootstrap/base.html" %}
+
+
+{% block title %}
+Gurgle - Base
+{% endblock %}
+
+
+{% block navbar %}
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="{{ url_for('index') }}">Gurgle</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ url_for('translait') }}">Translait</a></li>
+        <li><a href="#Dryve">Dryve</a></li>
+        <li><a href="#Gurgle+">Gurgle+</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endblock %}
+
+
+{% block content %}
+  <h1>Gurgle - Base Template</h1>
+{% endblock %}

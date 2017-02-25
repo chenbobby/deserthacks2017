@@ -1,3 +1,28 @@
-<h1>Welcome to Gurgle!</h1>
-<h2>Created by Bob Chen</h2>
+{% extends "base.html" %}
 
+
+{% block title %}
+Gurgle
+{% endblock %}
+
+
+{% block content %}
+<div class="jumbotron text-center">
+  <h1>Gurgle</h1>
+  <p>Created by Bob Chen</p> 
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 col-xs-1"></div>
+        <div class="col-sm-6 col-xs-10">
+            <form submit="{{ serchModule.gurgleSerch() }}">
+                <input type="text" class="form-control" id="searchbar">
+                <button type="submit" class="btn btn-default">Gurgle Serch</button>
+                <button type="button" class="btn btn-default" href="#">I'm Feeling Gurgly</button>
+            </form>
+        </div>
+        <div class="col-sm-3 col-xs-1"></div>
+    </div>
+</div>
+{% endblock %}

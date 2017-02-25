@@ -5,6 +5,8 @@ class Config(object):
     ADMINS = frozenset(['appdev.bobchen@gmail.com'])
     SECRET_KEY = 'secretkey'
 
+    WTF_CSRF_ENABLED = True
+
     THREADS_PER_PAGE = 2
 
 class DevelopmentConfig(Config):
