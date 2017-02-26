@@ -14,5 +14,10 @@ def index():
     return render_template('index.html')
 
 @app.route('/translait')
-def translait():
+def goToTranslait():
     return render_template('translait.html')
+
+@app.route('/gurgleplus')
+def goToGurglePlus():
+    return render_template('gurgleplus.html')
+

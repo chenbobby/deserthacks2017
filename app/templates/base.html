@@ -5,6 +5,11 @@
 Gurgle - Base
 {% endblock %}
 
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='base.css')}}">
+{% endblock %}
 
 {% block navbar %}
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -19,8 +24,7 @@ Gurgle - Base
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{ url_for('translait') }}">Translait</a></li>
-        <li><a href="#Dryve">Dryve</a></li>
+        <li><a href="{{ url_for('goToTranslait') }}">Translait</a></li>
         <li><a href="#Gurgle+">Gurgle+</a></li>
       </ul>
     </div>
