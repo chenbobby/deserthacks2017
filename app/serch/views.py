@@ -1,8 +1,11 @@
-from flask import Blueprint, render_template, redirect, url_for
+from flask import Blueprint, render_template, redirect, request, url_for
 
 serch = Blueprint('serch', __name__, template_folder="templates")
 
-@serch.route('/gurgleSerch', methods=['POST'])
+@serch.route('/gurgleSerch')
 def gurgleSerch():
-    print("Gurgle Searched")
-    return render_template('serch.html')
+    query = request.args.get('query')
+    print(query)
+    if(query==""):
+        return redirect(url_for('index'))
+    return render_template('serch.html', query=query)
